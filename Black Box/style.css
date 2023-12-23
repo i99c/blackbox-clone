@@ -1,0 +1,419 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    justify-content: space-between;
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 20px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.nav-logo{
+  
+    width: 190px;
+    height: 65px;
+
+}
+
+#nav-sag{
+   right: 20%;
+}
+
+/* ! buton */
+
+.btn{
+    margin-right: 30px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+
+#ilk {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(ilk.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white; /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    z-index: 1; /* Set a higher z-index for the main container */
+}
+
+#ilk::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken the background by increasing the alpha value */
+    z-index: -1; /* Set a lower z-index for the pseudo-element */
+}
+
+.ilk_content {
+    z-index: 2; /* Make sure the content is on top */
+    width: 50%;
+    color: white;
+    font-size: larger;
+    text-align: center;
+}
+
+#ilk h3 {
+    line-height: 1.5; /* Adjust the line-height to create space between lines */
+    white-space: pre; /* Allow preformatted text, treating consecutive spaces as non-breaking spaces */
+}
+
+
+
+#ikinci{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(ikinci.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white; /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#ucuncu{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(ucuncu.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for darkness */
+    }
+}
+
+
+.dorduncu {
+    height: 1000px;
+    width: 100%;
+    background-color: rgb(236, 234, 234);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+}
+
+.paragraph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the content to grow to fill available space */
+}
+
+.paragraph-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the row */
+}
+
+/* Optional: Style the paragraphs */
+.paragraph-row p {
+    max-width: 350px; /* Adjust as needed */
+    text-align: left;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+/* Center the video */
+.dorduncu iframe {
+    align-self: center;
+}
+
+
+#besince{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(besince.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white; /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for darkness */
+    }
+}
+
+
+#yedince {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url(yedinco.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white; /* Set text color to white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#yedince::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for darkness */
+}
+
+
+.altinci {
+    height: 1050px;
+    width: 100%;
+    background-color: rgb(236, 234, 234);
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content at the top */
+}
+
+.paragraph-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the content to grow to fill available space */
+}
+
+.paragraph-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the row */
+}
+
+/* Optional: Style the paragraphs */
+.paragraph-row p {
+    max-width: 500px; /* Adjust as needed */
+    text-align: left;
+    font-size: 22px;
+    font-weight: 100;
+}
+
+/* Center the video */
+.altinci iframe {
+    align-self: center;
+}
+
+
+
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #111e2e;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: white;
+  opacity: 0.9;
+}
+
+/* Hover Efekti */
+.socialIcons a:hover {
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: .7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+
+/* Footer */
+@media (max-width:700px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .header-content {
+    top: 5%;
+    left: 35%;
+  }
+
+  
+}
+
+/* Ekran Genişliği 750px'de Navbar Ayarı */
+@media screen and (max-width: 750px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #000;
+    z-index: 1;
+  }
+
+  .nav-links.active li {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+/* Ekran Genişliği 850px'de Navbar Ayarı */
+@media screen and (max-width: 850px) {
+  .logo img {
+    width: 80px;
+  }
+}
+
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

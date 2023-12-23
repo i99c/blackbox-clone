@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="...">
+    <style>
+
+body {
+            margin: 0;
+            overflow: hidden; /* Prevent scrolling while the loader is displayed */
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .loader {
+            padding: 20px;
+            border-radius: 10px;
+            background: white;
+        }
+
+        .spinner i {
+            animation: rotate 1s infinite linear; /* Add rotation animation */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .inline {
+            display: none; /* Initially hide the content */
+        }
+
+
+              .hidden {
+            display: none;
+        }
+
+        .age-section span {
+            display: flex;
+            align-items: center;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        
+
+    </style>
+</head>
+<body onload="myFunction()">
+
+    <div class="loader-container">
+      <div class="loader spinner"><i class="fas fa-spinner fa-5x"></i></div>
+    </div>
+
+
+    <div class="first-div">
+        <div class="left-section"">
+            <p>Want to know more about BlackBox before you register? Visit our website here www.blackbox.global</p>
+            <h5>BEFORE YOU REGISTER PLEASE NOTE: </h5>
+            <p>1. After you register please allow for a few days for us to review your registration and send your confirmation email.</p>
+            <hr>
+            <p>2. When you get your confirmation email it will include a temporary password. Login to portal.blackbox.global using this temporary password and make the necessary account changes (Payout Name, NEW PASSWORD) and AGREE to the GENERAL RIGHTS AGREEMENT.</p>
+            <br>
+            <p>3. Ensure that one of your roles is CURATOR if you want to CURATE (Edit, Tag, Keyword, colour correct etc.) content for other members and to be considered for curation invitations in our MARKETPLACE.</p>
+          
+        </div>
+        <div class="right-section">
+          <div id="top-div">
+            <a href="sign-in.html">Sign in</a>
+            <a href="register.html">Register</a>
+        </div>
+            <p>User Type</p>
+            <label for="personal">Personal</label>
+            <input type="radio" name="userType" id="personal" onclick="toggleSection('personalSection', 'companySection')" checked>
+            <label for="company">Company</label>
+            <input type="radio" name="userType" id="company" onclick="toggleSection('companySection', 'personalSection')">
+            <div id="personalSection">
+                <!-- Personal section content -->
+                <label for="">First Name*</label>
+                <input type="text">
+                <label for="">Last Name*</label>
+                <input type="text">
+                <label for="">Telephone*</label>
+                <input type="number">
+                <label for="">E-mail*</label>
+                <input type="email">
+                <label for="">Confirm E-mail*</label>
+                <input type="email">
+                <label for="">City*</label>
+                <input type="text" name="" id="">
+                <label for="">Country*</label>
+                <select name="" id="">
+                    <option value="">------</option>
+                    <option value="">Türkiye</option>
+                </select>
+                <div class="age-section">
+                    <span>
+                        <input type="checkbox">
+                        <p>I am 18 years of age or older</p>
+                    </span>
+                </div>
+            </div>
+            <div id="companySection" class="hidden">
+                <!-- Company section content -->
+                <p></p>
+                <span></span>
+                <label for="">Company Name*</label>
+                <input type="text">
+                <label for="">Company's Website*</label>
+                <input type="url">
+                <label for="">Company's Social Media Link*</label>
+                <input type="url">
+                <label for="">Company Representative's First Name*</label>
+                <input type="text">
+                <label for="">Company Representative's Last Name*</label>
+                <input type="text">
+                <label for="">First Name*</label>
+                <input type="text">
+                <label for="">Telephone*</label>
+                <input type="text">
+                <label for="">E-mail*</label>
+                <input type="email">
+                <label for="">Confirm E-mail*</label>
+                <input type="email">
+                <label for="">City*</label>
+                <input type="text" name="" id="">
+                <label for="">Country*</label>
+                <select name="" id="">
+                    <option value="">------</option>
+                    <option value="">Türkiye</option>
+                </select>
+                <div class="age-section">
+                    <span>
+                        <input type="checkbox">
+                        <p>I am 18 years of age or older</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        
+
+let myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+    document.querySelector(".loader-container").style.display = "none";
+    document.querySelector(".inline").style.display = "block";
+    // Re-enable scrolling
+    document.body.style.overflow = "auto";
+}
+
+
+
+        function toggleSection(showSection, hideSection) {
+            let showSectionElement = document.getElementById(showSection);
+            let hideSectionElement = document.getElementById(hideSection);
+
+            if (showSectionElement.style.display === "none" || showSectionElement.style.display === "") {
+                showSectionElement.style.display = "block";
+                hideSectionElement.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
